@@ -28,11 +28,7 @@ void fiveTestScores(){
 
 	switch (dropLowestTestGrade){
 
-	case 1: // you can use a case statement with 'y' and 'Y' with 'n' and 'N'
-            //case 'y':
-            //case 'Y':
-            //this is known as falling through cases.
-        sum = (test1 + test2 + test3 + test4 + test5) - dropLowestScore(test1, test2, test3, test4, test5);
+	case 1: sum = (test1 + test2 + test3 + test4 + test5) - dropLowestScore(test1, test2, test3, test4, test5);
 		sum = sum / 4;
 		cout << "Your new average test score is " << sum;
 		break;
@@ -55,7 +51,7 @@ int avgScore(int test1,int test2,int test3,int test4,int test5){
 }
 
 int dropLowestScore(int test1, int test2, int test3, int test4, int test5){
-	int minScore = 0; // instead of 0, you could have set it to test1
+	int minScore = 0;
 	if (test1 < test2){
 		if (test2 < test1){
 			minScore = test2;
